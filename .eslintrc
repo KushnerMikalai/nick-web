@@ -1,0 +1,44 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:promise/recommended"
+  ],
+  "plugins": [
+    "react-hooks",
+    "react",
+    "jsx-a11y",
+    "optimize-regex",
+    "sonarjs",
+    "no-loops",
+    "no-use-extend-native",
+    "promise",
+    "unicorn"
+  ],
+  "rules": {
+    "no-console": "off",
+
+    "unicorn/catch-error-name": "error",
+    "unicorn/consistent-function-scoping": "error",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "packageDir": "./"
+      }
+    ],
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "optimize-regex/optimize-regex": "warn",
+    "sonarjs/cognitive-complexity": ["error", 30],
+    "no-loops/no-loops": 2,
+    "no-use-extend-native/no-use-extend-native": 2
+  }
+}
