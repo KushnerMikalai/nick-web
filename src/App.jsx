@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
+import Global from './styles/globalComponents';
 
 function Example() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
-    document.title = `You click ${count}`;
-    console.log('useEffect, (componentDidMount, componentDidUpdate)');
+    // document.title = `You click ${count}`;
+    console.log(count, 'useEffect, (componentDidMount, componentDidUpdate)');
 
     return () => {
       console.log(count, '<--- useEffect (componentWillUnmount)');
@@ -30,8 +33,8 @@ function Example() {
 }
 
 const App = () => (
-  <div className="app">
-    <header className="App-header">
+  <S.App>
+    <Global.Container>
       <div>
         {process.env.NODE_ENV}
       </div>
@@ -48,8 +51,14 @@ const App = () => (
         Learn Puk Puk
       </a>
       <Example />
-    </header>
-  </div>
+    </Global.Container>
+  </S.App>
 );
+
+const S = {};
+
+S.App = styled.div`
+  display: block;
+`;
 
 export default App;

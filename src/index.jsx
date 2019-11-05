@@ -13,6 +13,7 @@ import Header from './components/Header';
 import App from './App';
 import Contact from './pages/Contact';
 import NotFound from './pages/404';
+import Disk from './pages/Disk';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -22,12 +23,9 @@ const routing = (
       <>
         <Header />
         <Switch>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-          <Route exact path="/">
-            <App />
-          </Route>
+          <Route exact path="/contact"><Contact /></Route>
+          <Route exact path="/disk"><Disk /></Route>
+          <Route exact path="/"><App /></Route>
           <Route path="*">
             <NotFound />
           </Route>
