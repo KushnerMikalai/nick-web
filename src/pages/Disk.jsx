@@ -3,14 +3,6 @@ import styled from 'styled-components';
 import gapi from 'gapi-client';
 import Global from '../styles/globalComponents';
 
-const init = () => {
-  const CLIENT_ID = '607708173368-p7f35cesqrsv25nhcr9kh1guhbaanmu1.apps.googleusercontent.com';
-  const API_KEY = 'AIzaSyAbXFVbsZEeOVeWQDnjBYvukRFpOvRqc0g';
-  const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-  const SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
-
-};
-
 const Drive = () => {
   return (
     <S.Main>
